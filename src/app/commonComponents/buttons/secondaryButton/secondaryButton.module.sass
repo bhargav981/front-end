@@ -1,0 +1,18 @@
+@import '~styles/mixins.sass'
+
+%width-100
+	width: 100%
+
+%box-sizing
+	box-sizing: border-box
+
+.button-style
+    @extend %box-sizing
+    @include display-flex-center-mixin
+    min-width: 120px
+    width: fit-content
+    cursor: pointer
+    padding: 5px 49px
+    height: 34px
+    text-transform: uppercase
+    display: table

@@ -1,0 +1,16 @@
+version: '3'
+services:
+  agile_frontend:
+    build:
+      dockerfile: dev.Dockerfile
+      context: ./
+      args:
+        ssh_prv_key: ${ssh_prv_key}
+    container_name: agile_frontend
+    environment:
+      APP_ENV: ${REACT_APP_ENV}
+    ports:
+      - "3000:3000"
+    volumes:
+      - "./src:/app/src"
+      - "./public:/app/public"

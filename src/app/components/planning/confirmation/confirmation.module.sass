@@ -1,0 +1,73 @@
+@import '~styles/mixins.sass'
+	
+.confirmation-container
+	@include display-flex-horizontal-center
+	@extend %row
+	width: 100%
+	min-width: 1280px
+	height: 100%
+	padding: 0 0 0 30px
+	box-sizing: border-box
+
+.confirmation-content
+	@include col-complete-container
+	@include center-all
+	padding: 0
+	height: 100%
+
+.confirmation-card-container
+	width: 100%
+	@include display-flex-center-mixin
+
+.confirmation-card
+	width: 647px
+	height: 302px
+	border-radius: 8px
+	margin: 57px 0 32px 0
+	box-sizing: border-box
+
+.confirmation-title
+	@include display-flex-center-mixin
+	margin-bottom: 15px
+	padding: 49px 45px 0 45px
+
+.phase-container
+	@include display-flex-center-mixin
+	margin-bottom: 17px
+
+.circle
+	width: 15px
+	height: 15px
+	border-radius: 50%
+	margin-right: 4px
+
+.arrow
+	margin: 0 15px
+	width: 26px
+	height: 13px
+
+.selected-prd-message
+	@include display-flex-center-mixin
+	padding: 0 45px 0 45px
+
+.day-budget-container
+	@include display-flex-space-between
+	width: 100%
+	height: 110px
+	margin-top: 31px
+	padding: 31px 102px
+	box-sizing: border-box
+	border-bottom-left-radius: 8px
+	border-bottom-right-radius: 8px
+
+.day-budget-title
+	margin-bottom: 6px
+	text-transform: uppercase
+	text-align: left
+
+.day-budget-value
+	margin-left: 9px
+	text-align: left
+
+.button-container
+	@include display-flex-center-mixin

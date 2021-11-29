@@ -1,0 +1,25 @@
+@import '~styles/mixins.sass'
+
+.customers-container
+	@include display-flex-center-mixin
+	// flex-direction: column
+	margin-left: 10px
+	width: 120px
+	cursor: pointer
+	
+.customers-content
+	@include display-flex-center-mixin
+	flex-direction: column
+	width: 36px
+	height: 36px
+	border-radius: 50%
+	box-sizing: border-box
+
+.customers-name
+	padding: 0 0 0 5px
+	width: calc(100% - 36px)
+	box-sizing: border-box
+
+.customers-image
+	width: 18px
+	height: 18px

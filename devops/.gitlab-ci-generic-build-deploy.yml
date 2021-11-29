@@ -1,0 +1,24 @@
+.build_deploy_template:
+  before_script:
+    # - docker login -u $GITLAB_DEPLOY_USERNAME -p $GITLAB_DEPLOY_TOKEN registry.knolskape.com
+      
+    - echo $GCP_ENV_FILE | base64 -d > $CI_PROJECT_DIR/.env
+    - export SENTRY_AUTH_TOKEN=$SENTRY_AUTH_TOKEN
+    - export SENTRY_ORG=$SENTRY_ORG
+    - export SENTRY_PROJECT=$SENTRY_PROJECT
+    - VERSION=$(sentry-cli releases propose-version)
+    - echo -e "\nREACT_APP_SENTRY_RELEASE=$VERSION" >> $CI_PROJECT_DIR/.env
+    - sentry-cli releases new -p $SENTRY_PROJECT -p $SENTRY_PROJECT $VERSION
+    - sentry-cli releases set-commits --auto $VERSION
+    - sentry-cli releases new "$VERSION"
+    - sentry-cli releases finalize "$VERSION"
+
+    - cat $CI_PROJECT_DIR/.env
+    - echo $GCP_DEPLOYER_SERVICE_ACCOUNT | base64 -d > $CI_PROJECT_DIR/gauth.json
+    - echo "Parameters to override default values - ENVIRONMENT_NAME"
+    - sed -i s/firebaseEnvironment/$firebaseEnvironment/g firebase.json
+    - sed -i s/FIREBASE_PROJECT_NAME/$FIREBASE_PROJECT_NAME/g .firebaserc
+
+  script:
+    - echo "Build Starts..."
+    - - docker build -t $REGISTRY_URL/$APP_NAME:$APP_NAME-$CI_PIPELINE_ID --build-arg firebaseEnvironment="$firebaseEnvironment" --build-arg ssh_prv_key="$(cat $REPO_KEY)"  -f Dockerfile_firebase .

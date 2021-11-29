@@ -1,0 +1,136 @@
+body {
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+		"Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+		sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	background: white
+}
+
+code {
+	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+		monospace;
+}
+
+/* width */
+::-webkit-scrollbar {
+	width: 8px;
+	border-radius: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background: #f6f5f7;
+	border-radius: 8px;
+	box-shadow: inset 0 0 2px grey;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: rgba(0, 0, 0, 0.3);
+	border-radius: 8px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: rgba(0, 0, 0, 0.6);
+}
+
+.flex-box-center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.base-app-box {
+	width: 100%;
+	height: 100vh;
+	min-width: 1270px;
+	min-height: 600px;
+	/* -webkit-transform:translate3d(0,0,0); */
+	position: relative;
+	overflow: hidden;
+	-webkit-touch-callout: none;
+	/* iOS Safari*/
+	-webkit-user-select: none;
+	-webkit-user-drag: none;
+	/* Chrome/Safari/Opera*/
+	-khtml-user-select: none;
+	-khtml-user-drag: none;
+	/* Konqueror*/
+	-moz-user-select: none;
+	-moz-user-drag: none;
+	/* Firefox*/
+	-ms-user-select: none;
+	-ms-user-drag: none;
+	/* Internet Explorer/Edge*/
+	user-select: none;
+}
+
+
+/* React joyride tooltip */
+.react-joyride__spotlight {
+	/* --padding: 8px 8px; */
+	width: fit-content;
+	/* padding: var(--padding); */
+	background-clip: content-box;
+	box-shadow: inset 0 0 0 var(--padding) rgba(0, 0, 0, 0);
+	box-sizing: border-box;
+	background-color: #FD1E510C;
+}
+
+.react-joyride__tooltip {
+	font-size: 16px !important;
+	width: auto !important;
+	max-width: 700px !important;
+	padding: 0 5px !important;
+	box-shadow: 2px 2px 4px 0px #00000033 !important;
+	background-image: url('https://knolskape-website.s3.amazonaws.com/misc/suyog_patil/2019/07/18/73/rectangle_4.4.svg') !important;
+	background-size: cover;
+
+}
+
+/* .react-joyride__tooltip div:nth-child(1) {text-align: left !important;	
+}
+
+.react-joyride__tooltip div:nth-child(1) div {
+	padding: 10px !important;
+	padding-bottom: 20px !important;
+}*/
+
+.react-joyride__tooltip div:nth-child(2) {
+	margin-top: 0px !important;
+	padding-bottom: 10px
+}
+
+.react-joyride__tooltip div:nth-child(2) button[data-test-id="button-primary"] {
+	padding: 7px 34px !important;
+	font-weight: bold !important;
+	font-size: 16px !important;
+	line-height: 22px !important;
+	color: #232882 !important;
+	margin-right: 8px !important;
+	border-radius: 0px !important;
+	background: linear-gradient(108.59deg, #FFFFFF 3.7%, #FFFFFF 100%) !important;
+	opacity: 0.9 !important;
+	border: 1px solid #232882 !important;
+}
+
+.react-joyride__tooltip div:nth-child(2) button[data-test-id="button-back"] {
+	/* display: none !important */
+	padding: 7px 34px !important;
+	font-weight: bold !important;
+	font-size: 16px !important;
+	line-height: 22px !important;
+	color: #232882 !important;
+	margin-right: 8px !important;
+	border-radius: 0px !important;
+	background: linear-gradient(108.59deg, #FFFFFF 3.7%, #FFFFFF 100%) !important;
+	opacity: 0.9 !important;
+	border: 1px solid #232882 !important;
+}
+
+.react-joyride__overlay {
+	cursor: default !important;
+}

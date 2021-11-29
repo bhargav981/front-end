@@ -1,0 +1,166 @@
+@import '~styles/mixins.sass'
+
+.container
+	height: 100%
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+	width: 100%
+
+.intro
+	width: 100%
+	height: calc(100% - 72px)
+	display: flex
+	position: relative
+
+.intro-full
+	width: 100%
+	height: 100%
+	display: flex
+	position: relative
+	
+.video
+	background-color: black 
+
+.image-1
+	z-index: 0
+
+.image-2
+	height: 100%
+	z-index: 0
+
+.intro-background
+	position: absolute
+	width: 100%
+	height: 100%
+	z-index: -1
+	top: 0
+	left: 0
+	// opacity: 0.4
+
+.intro-background-left
+	position: absolute
+	width: 288px
+	height: 251px
+	z-index: 1
+	top: 50%
+	left: 0
+
+.intro-background-right
+	position: absolute
+	width: 384px
+	height: 221px
+	z-index: 2
+	top: 10%
+	right: 0
+
+.intro-content-container
+	padding-top: 40px
+	position: absolute
+	z-index: 3
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	// display: flex
+	// align-items: center
+	// justify-content: flex-start
+	// flex-direction: column
+	overflow-y: auto
+	box-sizing: border-box
+
+.intro-content
+	width: 100%
+	height: 100%
+	overflow-y: auto
+	overflow-x: hidden
+
+.intro-footer
+	position: absolute
+	width: 100%
+	height: 72px
+	left: 0px
+	background: #FFFFFF
+	box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.15)
+
+.button
+	@include display-flex-center-mixin
+	@extend %row
+	padding: 40px 0
+
+.intro-footer-container
+	width: 100%
+	height: 72px
+	position: relative
+	box-sizing: border-box
+	@extend %row
+
+.intro-footer-background
+	width: 100%
+	height: 100%
+	position: absolute
+	top: 0
+	left: 0
+	z-index: 1
+	display: flex
+	align-items: flex-end
+	justify-content: flex-start
+
+.intro-footer-content
+	box-sizing: border-box
+	@extend %row
+	height: 100%
+	width: 100%
+	position: absolute
+	top: 0
+	left: 0
+	z-index: 2
+
+.intro-footer-component
+	@include col-complete-container
+	display: flex
+	align-items: center
+	justify-content: flex-end
+
+.transcript-container
+	width: 100%
+	display: flex
+	flex-direction: column
+	align-items: center
+
+.transcript-content
+	box-sizing: border-box
+	padding: 15px 50px
+	width: 900px
+	display: flex
+	flex-direction: column
+	align-items: center
+	margin: 10px 0
+
+.transcript-show
+	padding-top: 5px
+	display: block
+	width: 100%
+
+.transcript-hidden
+	padding-top: 5px
+	display: none
+
+.transcript
+	// cursor: pointer
+	display: flex
+	align-items: center
+	justify-content: flex-start
+	width: 100%
+
+.video-container
+	height: 500px
+	width: 100%
+	@include display-flex-center-mixin
+
+.icon
+	height: 8px
+	width: 12px
+
+	
+	

@@ -1,0 +1,86 @@
+@import '~styles/mixins.sass'
+
+.container
+	@include display-flex-center-mixin
+	width: 100%
+	min-height: 240px
+	box-sizing: border-box
+	position: relative
+	top: 0
+	left: 0
+	@extend %row
+
+.image-container
+	@include display-flex-center-mixin
+	width: 20%
+	height: 100%
+	// padding: 12px
+	box-sizing: border-box
+
+.image
+	width: 250px
+	height: 182px
+
+.response-container
+	width: 80%
+	// height: 100%
+	padding: 30px 30px 30px 13px
+	box-sizing: border-box
+
+.response-message
+	width: 100%
+	box-sizing: border-box
+	padding-right: 190px
+
+.person-name
+	width: 80%
+	height: 100%
+	padding: 0px 30px 20px 15px
+	box-sizing: border-box
+
+.close-container
+	position: absolute
+	top: 15px
+	right: 15px
+	width: 25px
+	height: 25px
+
+.metrics-container
+	@include display-flex-start
+	margin-top: 25px
+
+.left-metric-container
+	min-height: 67px
+	border-radius: 18px
+	margin: 0 8px
+	padding: 10px 18px
+	box-sizing: border-box
+	min-width: 175px
+
+.left-metrics-value-change-container
+	@include display-flex-start
+	margin-top: 3px
+
+.metric-title
+	text-transform: uppercase
+
+.metrics-image
+	width: 16px
+	height: 16px
+	margin-right: 8px
+
+.metrics-value
+	margin-right: 12px
+
+.metrics-change
+	@include display-flex-center-mixin
+	min-width: 35px
+	height: 17px
+	padding: 0 5px
+	border-radius: 12px
+	box-sizing: border-box
+
+.arrow-container
+	width: 7px
+	height: 9px
+	margin-right: 3px

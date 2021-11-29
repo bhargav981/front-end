@@ -1,0 +1,64 @@
+@import '~styles/mixins.sass'
+
+.sim-progress-container
+	display: flex
+	align-items: center
+	justify-content: flex-start
+	padding-left: 15px
+	box-sizing: border-box
+	
+.sim-progress-content
+	display: flex
+	align-items: center
+	justify-content: flex-start
+	padding-right: 25px
+	margin-top: 5px
+
+.progress-start-text
+	padding-right: 5px
+	height: 100%
+	box-sizing: border-box
+	@include display-flex-center-mixin
+
+.progress-end-text
+	padding-left: 5px
+	height: 100%
+	box-sizing: border-box
+	@include display-flex-center-mixin
+	padding-bottom: 5px
+
+.progress-container
+	// min-width: 200px
+	display: flex
+	align-items: flex-end
+	justify-content: center
+	position: relative
+	padding: 0 10px
+
+.end-days-container
+	width: 2px
+	height: 10px
+	margin-right: 1px
+	border-radius: 2px
+	box-sizing: border-box
+
+.middle-days-container
+	width: 2px
+	height: 6px
+	margin-right: 1px
+	border-radius: 2px
+	box-sizing: border-box
+
+.current-days-container
+	width: 2px
+	height: 8px
+	margin-right: 1px
+	border-radius: 2px
+	box-sizing: border-box
+
+.day-tag-container
+	position: absolute
+	width: 45px
+	height: 14px
+	border-radius: 4px
+	@include display-flex-center-mixin

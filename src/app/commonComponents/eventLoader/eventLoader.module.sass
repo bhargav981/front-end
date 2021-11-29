@@ -1,0 +1,31 @@
+@import '~styles/mixins.sass'
+
+.loader-container
+	@include display-flex-center-mixin
+	flex-direction: column
+	// position: relative
+
+.svg-container
+	@include display-flex-center-mixin
+	// position: absolute
+	-webkit-animation: loadingMove 1.5s infinite
+	animation: loadingMove 1.5s infinite
+	width: 103px
+	height: 92px
+	margin-bottom: 10px
+
+.svg-wrapper
+	width: 100%
+	height: 100%
+
+@keyframes loadingMove
+	from
+		transform: rotate(0deg)
+	10%
+		transform: rotate(15deg)
+	20%
+		transform: rotate(-15deg)
+	30%
+		transform: rotate(0deg)
+	to
+		transform: rotate(0deg)

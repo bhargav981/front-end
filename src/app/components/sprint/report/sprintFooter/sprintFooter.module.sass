@@ -1,0 +1,36 @@
+@import '~styles/mixins.sass'
+
+.sprint-footer-container
+	width: 100%
+	height: 72px
+	position: relative
+	box-sizing: border-box
+	margin-top: 8px
+	// @extend %row
+	position: relative
+
+.sprint-footer-background
+	width: 100%
+	height: 100%
+	z-index: 1
+	position: absolute
+	top: 0
+	left: 0
+	display: flex
+	align-items: flex-end
+	justify-content: flex-start
+
+.sprint-footer-component-content
+	width: 100%
+	height: 100%
+	z-index: 2
+	position: absolute
+	top: 0
+	left: 0
+	@extend %row
+
+.sprint-footer-component
+	@include col-complete-container
+	display: flex
+	align-items: center
+	justify-content: flex-end

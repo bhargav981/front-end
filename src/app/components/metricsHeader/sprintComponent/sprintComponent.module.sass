@@ -1,0 +1,56 @@
+@import '~styles/mixins.sass'
+
+.sprint-container
+	@include display-flex-center-mixin
+	flex-direction: column
+	margin-right: 20px
+	
+.sprint-content
+	@include display-flex-center-mixin
+	flex-direction: column
+	width: 200px
+	height: 50px
+	border-radius: 10px
+	box-sizing: border-box
+	padding: 5px 10px
+
+.sprint-name-desc-container
+	display: flex
+	align-items: center
+	justify-content: flex-start
+	width: 100%
+
+.sprint-name
+	padding-right: 5px
+
+.sprint-day-progress-container
+	display: flex
+	align-items: center
+	justify-content: flex-start
+	height: 65%
+	width: 100%
+
+.sprint-day-container
+	width: 35%
+	height: 100%
+
+.sprint-progress-container
+	padding-left: 5px
+	width: 65%
+	height: 100%
+	box-sizing: border-box
+	@include display-flex-center-mixin
+
+.sprint-day
+	width: 6px
+	height: 17px
+	margin-right: 5px
+	border-radius: 5px
+	@include display-flex-center-mixin
+
+.sprint-current-day
+	width: 8px
+	height: 23px
+	margin-right: 5px
+	border-radius: 6px
+	@include display-flex-center-mixin

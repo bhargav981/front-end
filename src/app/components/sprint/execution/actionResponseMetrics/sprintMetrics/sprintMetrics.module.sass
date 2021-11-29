@@ -1,0 +1,33 @@
+@import '~styles/mixins.sass'
+
+.left-metric-container
+	min-height: 67px
+	border-radius: 18px
+	margin-right: 8px
+	padding: 6px 18px
+	box-sizing: border-box
+
+.right-arrow
+	margin: 0 6px
+	width: 8px
+	height: 10px
+
+.sprint-day-container
+	@include display-flex-start
+	text-transform: uppercase
+
+.sprint-blocks-container
+	@include display-flex-start
+
+.sprint-block
+	width: 8px
+	height: 24px
+	border-radius: 7px
+	margin: 3px
+
+.sprint-block:first-child
+	margin-left: 0
+
+.current-sprint-block
+	width: 11px
+	height: 31px

@@ -1,0 +1,24 @@
+@import '~styles/mixins.sass'
+
+.report-container
+	@include display-flex-center-mixin
+	margin-left: 10px
+	width: 83px
+	cursor: pointer
+	
+.tm-content
+	@include display-flex-center-mixin
+	flex-direction: column
+	width: 36px
+	height: 36px
+	border-radius: 50%
+	box-sizing: border-box
+
+.tm-name
+	padding: 0 0 0 5px
+	width: calc(100% - 36px)
+	box-sizing: border-box
+
+.tm-image
+	width: 14px
+	height: 16px

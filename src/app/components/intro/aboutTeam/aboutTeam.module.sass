@@ -1,0 +1,42 @@
+@import '~styles/mixins.sass'
+
+.about-team-container
+    @include display-flex-center-mixin
+    @extend %row
+
+.about-team-content
+    display: flex
+    justify-content: center
+    @extend %col-md-10
+    margin: 20px 0
+    
+.image-text
+    width: 90%
+    display: flex
+    margin: 20px 0
+
+.team-image
+    width: 50%
+
+.image
+    float: right
+    height: 100%
+    width: 100%
+
+.team-text-holder
+    width: 50%
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    padding-right: 20px
+    box-sizing: border-box
+
+.team-title
+    display: flex
+    padding: 30px 0
+    width: 100%
+    
+.team-desc
+    display: flex
+    text-align: justify

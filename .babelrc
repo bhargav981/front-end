@@ -1,0 +1,15 @@
+{
+    "presets": [["@babel/preset-env", { "targets": "defaults" }], ["@babel/preset-react", { "throwIfNamespace": false }]],
+    "plugins": [
+        ["@babel/plugin-proposal-decorators", { "legacy": true }],
+        ["@babel/plugin-proposal-class-properties", { "loose": true }],
+        ["react-html-attrs"],
+        [
+            "react-css-modules",
+            {
+              "generateScopedName": "[path]__[name]__[local]__[hash:base64:5]",
+              "handleMissingStyleName": "warn"
+            }
+        ]
+    ]
+}

@@ -1,0 +1,103 @@
+@import '~styles/mixins.sass'
+
+.mvp-popup-container
+	width: 1000px
+	// height: 548px
+
+.header-container
+	width: 100%
+	min-height: 150px
+	position: relative
+
+@media only screen and (max-height: 700px)
+	.header-container
+		min-height: 100px
+				
+.content-container
+	width: 100%
+	height: 450px
+	// height: calc(100% - 60px)
+	position: relative
+	box-sizing: border-box
+	padding: 30px 20px
+
+.cards-container
+	width: 100%
+	height: 100%
+	overflow-y: auto
+	display: flex
+	// flex-direction: column
+	flex-wrap: wrap
+	align-items: flex-start
+	justify-content: flex-start
+
+.header-background-container
+	position: absolute
+	z-index: 1
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+
+.header-content-container
+	position: absolute
+	z-index: 2
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	@include display-flex-center-mixin
+	padding: 20px 15px
+	box-sizing: border-box
+
+@media only screen and (max-height: 760px)
+	.header-content-container		
+		padding: 10px 15px	
+
+.header-details-container
+	width: 90%
+	height: 100%
+	// @include display-flex-center-mixin
+	flex-direction: column
+	padding: 0 20px
+	box-sizing: border-box
+
+.heading-content
+	width: 100%
+	display: flex
+	align-items: flex-start
+	justify-content: space-between
+	padding-bottom: 5px
+
+.desc-content
+	width: 100%
+	text-align: left
+
+.heading-text
+	padding-right: 10px
+	box-sizing: border-box
+
+.correct-help-container
+	display: flex
+	align-items: center
+	justify-content: center
+
+.correct-help-img
+	width: 24px
+	height: 24px
+
+.correct-help-text
+	padding-left: 8px
+
+.close-container
+	width: 10%
+	height: 100%
+	display: flex
+	align-items: flex-start
+	justify-content: center
+	padding: 5px 0
+	box-sizing: border-box
+
+.close-icon
+	width: 26px
+	height: 26px

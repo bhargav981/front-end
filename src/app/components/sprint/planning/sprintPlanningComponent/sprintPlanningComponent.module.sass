@@ -1,0 +1,79 @@
+@import '~styles/mixins.sass'
+
+.sprint-planning-component
+	width: 100%
+	height: calc(100% - 90px)
+	position: relative
+	box-sizing: border-box
+	margin-top: 16px
+
+.sprint-planning-component-background
+	position: absolute
+	width: 100%
+	height: 100%
+	z-index: 1
+	top: 0
+	left: 0
+
+.sprint-planning-component-content
+	position: absolute
+	width: 100%
+	height: 100%
+	z-index: 2
+	top: 0
+	left: 0
+	box-sizing: border-box
+	overflow: hidden
+
+.planning-background
+	position: absolute
+	width: 100%
+	height: 100%
+	z-index: 1
+	top: 0
+	left: 0
+	box-sizing: border-box
+
+.planning-content-container
+	position: absolute
+	width: 100%
+	height: 100%
+	z-index: 2
+	top: 0
+	left: 0
+	box-sizing: border-box
+	padding-top: 8px
+	
+.planning-content
+	width: 100%
+	height: 100%
+	padding: 0
+
+.cards-container
+	max-height: calc(100% - 65px)
+	width: 100%
+	box-sizing: border-box
+	padding: 10px 24px 20px 24px
+	overflow-y: auto
+	padding-top: 10px
+
+.zoomed-card
+	position: absolute
+	top: 55px
+	left: 60px
+	z-index: 10000
+
+.each-status-stories-container
+	width: 100%
+	padding-top: 10px
+
+.each-status-heading
+	height: 30px
+	width: 100%
+	padding-bottom: 10px
+	box-sizing: border-box
+
+.each-status-cards-container
+	display: flex
+	flex-wrap: wrap
+	width: 100%

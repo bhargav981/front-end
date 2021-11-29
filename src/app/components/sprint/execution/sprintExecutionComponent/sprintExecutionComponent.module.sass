@@ -1,0 +1,60 @@
+@import '~styles/mixins.sass'
+
+.sprint-execution-component
+	width: 100%
+	height: calc(100% - 90px)
+	position: relative
+	box-sizing: border-box
+	margin-top: 16px
+
+.sprint-execution-component-background
+	position: absolute
+	width: 100%
+	height: 100%
+	z-index: 1
+	top: 0
+	left: 0
+
+.sprint-execution-component-content
+	position: absolute
+	width: 100%
+	height: 100%
+	z-index: 2
+	top: 0
+	left: 0
+
+.sprint-execution-container
+	display: flex
+	width: 100%
+	height: 100%
+	box-sizing: border-box
+	padding-top: 24px
+
+.cards-row-container
+	width: calc(100% - 270px)
+	height: 100%
+	@extend %row
+	padding-right: 4px
+
+.cards-container
+	padding: 0
+	@include col-complete-container
+
+.actions-container
+	width: 270px
+	// height: fit-content
+	height: 100%
+	box-sizing: border-box
+	padding-bottom: 15px
+	display: flex
+	align-items: flex-start
+	justify-content: flex-end
+
+.actions-container-disabled
+	width: 270px
+	height: fit-content
+	display: flex
+	align-items: flex-start
+	justify-content: flex-end
+	pointer-events: none
+	opacity: 0.2

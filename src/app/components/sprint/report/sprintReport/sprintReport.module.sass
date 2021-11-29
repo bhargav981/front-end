@@ -1,0 +1,174 @@
+@import '~styles/mixins.sass'
+
+.oa
+	overflow: auto
+.unfinshed-task
+	width: 50%
+	height: 100%
+
+.task-graph
+	width: 50%
+
+.sprint-report-container
+	width: 100%
+	position: relative
+	box-sizing: border-box
+	height: 100%
+	overflow: auto
+	@extend %row
+	justify-content: center
+	font-family: 'Open Sans'
+
+.sprint-report-content-container
+	@include col-report-container
+
+.sprint-report-popup-content-container
+	@include col-report-popup-container
+
+.master
+	background-size: cover
+	background-image: url("/static/media/sim_background.ac319c29.png")
+
+.sprint-report-component
+	width: 100%
+	height: 100%
+
+.tabs
+	height: 52px
+	width: 100%
+	display: flex
+	align-items: center
+	justify-content: space-between
+
+.text
+	width: 100%
+	font-family: 'Open Sans'
+	padding: 20px 20px
+	margin: 15px 0px
+	width: 100%
+	color: rgb(3,26,32)
+	line-height: 25px
+	background-color: rgba(253,30,81, 0.06)
+	box-sizing: border-box
+	border-radius: 8px
+	div:first-child
+		font-size: 18px
+		font-weight: 600
+	div:nth-child(2)
+		font-size: 16px
+		margin-top: 15px
+		color: #031A20
+		opacity: 0.7
+
+.info
+	display: flex
+	justify-content: center
+	align-items: flex-start
+	margin: 20px 0
+	width: 100%
+
+.metrics
+	// border-right: 1px solid rgba(35,40,130, 0.2)
+	width: 43%
+	box-sizing: border-box
+	padding-right: 15px
+
+.met-name
+	font-weight: 600
+	font-size: 14px
+	line-height: 19px
+	text-transform: uppercase
+	color: #232882
+	opacity: 0.6
+
+.customers-speak
+	width: 90%
+
+.task
+	width: 57%
+	box-sizing: border-box
+	padding-left: 15px
+	border-left: 1px solid rgba(35,40,130, 0.2)
+
+.task-row
+	display: flex
+	width: 100%
+	height: 250px
+	margin-bottom: 20px
+
+.heading
+	font-weight: 600
+	font-size: 14px
+	line-height: 19px
+	text-transform: uppercase
+	color: rgba(35,40,130,0.6)
+	height: 30px
+	display: flex
+	align-items: center
+
+.heading-text
+	padding-right: 10px
+
+.game-completed
+	background: linear-gradient(90.13deg, #232882 0%, #B32161 100%)
+	width: 100%
+	height: 250px
+	// margin-top: 50px
+	border-radius: 5px
+	display: flex
+.img
+	width: 400px
+	height: 100%
+.content
+	padding: 51px 10px 0px 10px
+.title
+	font-weight: 600
+	font-family: 'Open Sans'
+	font-size: 20px
+	color: rgba(255,255,255, 0.9)
+	
+.ms
+	font-family: 'Open Sans'
+	font-size: 16px
+	color: rgba(255,255,255, 0.9)
+	padding: 10px 0px 20px 0px
+	max-width: 80%
+
+.download-button
+	background: linear-gradient(114.68deg, #FFFFFF 3.7%, #FFFFFF 100%)
+	opacity: 0.9
+	border: 1px solid #232882
+	border-radius: 4px
+	width: 220px
+	height: 46px
+	color: #232882
+	font-weight: bold
+	font-size: 16px
+	text-align: center
+	line-height: 46px
+	cursor: pointer
+
+.walkthrough-tabs-container
+	padding: 22px 0
+
+.flow
+	position: relative
+
+.buttons-container
+	height: 75px
+	display: flex
+	align-items: flex-start
+	justify-content: flex-start
+
+.single-button-container
+	margin-right: 20px
+	height: 100%
+	display: flex
+	flex-direction: column
+	align-items: flex-start
+	justify-content: flex-start
+
+.help-text-report
+	height: 20px
+	padding-top: 4px
+	width: 300px

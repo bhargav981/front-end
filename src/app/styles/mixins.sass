@@ -1,0 +1,132 @@
+@import './flexboxgrid.scss'
+@import '../fonts/fonts.sass'
+
+@mixin noselect
+	-webkit-touch-callout: none
+	/* iOS Safari*/
+	-webkit-user-select: none
+	-webkit-user-drag: none
+	/* Chrome/Safari/Opera*/
+	-khtml-user-select: none
+	-khtml-user-drag: none
+	/* Konqueror*/
+	-moz-user-select: none
+	-moz-user-drag: none
+	/* Firefox*/
+	-ms-user-select: none
+	-ms-user-drag: none
+	/* Internet Explorer/Edge*/
+	user-select: none
+	user-drag: none
+
+@mixin display-flex
+    display: flex
+    
+@mixin display-flex-column
+    display: flex
+    flex-direction: column
+
+@mixin display-flex-center-mixin
+    display: flex
+    align-items: center
+    justify-content: center
+
+@mixin display-flex-start
+    display: flex
+    justify-content: flex-start
+    align-items: center
+
+@mixin display-flex-space-between
+    display: flex
+    justify-content: space-between
+
+@mixin display-flex-space-around
+    display: flex
+    justify-content: space-around
+
+@mixin display-flex-end-vertical
+    display: flex
+    align-items: flex-end
+    justify-content: flex-end
+
+@mixin display-flex-end
+    display: flex
+    align-items: center
+    justify-content: flex-end
+
+@mixin display-flex-horizontal-center
+    display: flex
+    align-items: flex-start
+    justify-content: center
+
+@mixin display-flex-horizontal-start
+    display: flex
+    align-items: flex-start
+    justify-content: flex-start
+
+@mixin padding-left-right-zero
+    padding-left: 0
+    padding-right: 0
+
+@mixin center-all
+    @extend %center-sm
+    @extend %center-md
+    @extend %center-lg
+
+@mixin col-start
+    @extend %start-md
+    @extend %start-lg
+
+@mixin col-end
+    @extend %end-md
+    @extend %end-lg
+    
+@mixin col-header
+    @extend %col-lg-12
+    @extend %col-md-12
+    @extend %col-sm-12
+
+@mixin col-observe-content
+    @extend %col-lg-10
+    @extend %col-md-10
+    @extend %col-sm-10
+    
+@mixin col-define-content
+    @extend %col-lg-9
+    @extend %col-md-9
+    @extend %col-sm-9
+
+@mixin col-define-content-history
+    @extend %col-lg-3
+    @extend %col-md-3
+    @extend %col-sm-3
+
+@mixin test-content
+    @extend %col-lg-10
+    @extend %col-md-10
+    @extend %col-sm-10
+
+@mixin complete-container
+    width: 100%
+    min-width: 1024px
+    overflow: auto
+
+@mixin card-view
+    border-radius: 4px
+    background-color: #ffffff
+    box-shadow: 1px 1px 5px 0 #d5d8e2
+
+@mixin col-complete-container
+    @extend %col-lg-12
+    @extend %col-md-12
+    @extend %col-sm-12
+
+@mixin col-report-container
+    @extend %col-lg-8
+    @extend %col-md-10
+    @extend %col-sm-12
+
+@mixin col-report-popup-container
+    @extend %col-lg-12
+    @extend %col-md-12
+    @extend %col-sm-12

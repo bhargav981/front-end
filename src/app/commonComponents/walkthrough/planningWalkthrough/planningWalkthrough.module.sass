@@ -1,0 +1,34 @@
+@import '~styles/mixins.sass'
+
+.container
+	height: 100%
+	@include display-flex-center-mixin
+
+.wrapper
+	width: 750px
+
+.description
+	text-align: center
+
+.description-steps-container
+	padding: 25px 70px
+	margin: 40px 0 67px 0
+	text-align: center
+
+.steps-container
+	margin-top: 30px
+	@include display-flex-center-mixin
+
+.button-container
+	@include display-flex-center-mixin
+
+.walkthrough-background
+	position: absolute
+	width: 100%
+	height: 100%
+	z-index: -1
+	top: 0
+	left: 0
+	opacity: 0.4
+
+

@@ -1,0 +1,54 @@
+@import '~styles/mixins.sass'
+
+.select-container
+	width: 185px
+	height: 50px
+	box-sizing: border-box
+	position: relative
+	outline: none
+	display: flex
+	flex-direction: column
+	align-items: flex-start
+	justify-content: center
+
+.heading
+	width: 100%
+	height: 15px
+	padding-bottom: 3px
+	box-sizing: border-box
+	padding-left: 10px
+
+.custom-select
+	height: 30px
+	width: 185px
+	box-sizing: border-box
+	cursor: pointer
+	border-radius: 15px
+	padding: 0 20px
+	display: flex
+	align-items: center
+	justify-content: space-between
+
+.each-option
+	width: 100%
+	padding: 5px 20px
+	box-sizing: border-box
+
+.option-heading
+	width: 100%
+	padding: 0 20px
+	box-sizing: border-box
+
+.down-arrow-container
+	width: 12px
+	height: 6px
+
+.custom-option-container
+	position: absolute
+	top: calc(100% + 5px)
+	left: 0px
+	z-index: 20
+	width: 185px
+	border-radius: 15px
+	overflow: hidden
+	padding: 10px 0

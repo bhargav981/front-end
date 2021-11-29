@@ -1,0 +1,44 @@
+@import '~styles/mixins.sass'
+
+.option-container
+	@include display-flex-horizontal-start
+	width: 100%
+	min-height: 50px
+	border-radius: 4px
+	box-sizing: border-box
+	padding: 6px 10px
+	margin-bottom: 10px
+	cursor: pointer
+
+.radio-container
+	width: 16px
+	margin-top: 2px
+
+.option-details-container
+	width: 100%
+
+.radio-outline
+	@include display-flex-center-mixin
+	width: 12px
+	height: 12px
+	border-radius: 50%
+	box-sizing: border-box
+	margin-top: 5px
+
+.radio-inner-circle
+	width: 6px
+	height: 6px
+	border-radius: 50%
+	box-sizing: border-box
+
+.option-effort-cost-container
+	@include display-flex-space-between
+	// margin-top: 5px
+
+.option-effort-cost-content
+	@include display-flex-start
+
+.option-effort-cost-title
+	// padding-right: 5px
+	margin-right: 5px
+

@@ -1,0 +1,133 @@
+@import '~styles/mixins.sass'
+.big
+    width: 530px
+    height: 92px
+    background: #FFFFFF
+    box-shadow: 0px 4px 5px rgba(11, 93, 115, 0.25)
+    border-radius: 8px
+    margin: 10px 0px 10px 10px
+    position: relative
+    border: 1px solid #232882
+    box-sizing: border-box
+
+.name-container
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    padding: 12px 0px 0px 8px
+
+.name
+    color: rgba(35,40,130,0.9)
+    font-size: 14px
+    line-height: 19px
+    text-transform: uppercase
+    padding-right: 5px
+.completion
+    color: #232882
+    font-weight: 600
+    font-size: 24px
+    line-height: 33px
+    padding: 0px 0px 0px 8px
+.graph-box
+    padding: 5px 0px 0px 8px
+.graph
+    background: #232882
+    opacity: 0.1
+    border-radius: 2px
+    height: 4px
+    width: 380px
+.graph-overlay
+    background: rgba(35,40,130,0.9)
+    border-radius: 2px
+    height: 4px
+    margin-top: -4px
+.small
+    height: 70px
+    background: #FFFFFF
+    box-shadow: 0px 4px 13px rgba(11, 93, 115, 0.25)
+    border-radius: 8px
+    width: 170px
+    margin-left: 10px
+    margin-top: 10px
+    position: relative
+.mb
+    height: 92px
+    .b-change
+        bottom: 13px
+        right: 28px
+.small-boxes
+    display: flex
+    margin-bottom: 35px
+.big-box
+    display: flex
+.met-name
+	font-weight: 600
+	font-size: 14px
+	line-height: 19px
+	text-transform: uppercase
+	color: #232882
+	opacity: 0.6
+.arrow
+    width: 12px
+    height: 6px
+    padding-top: 2px
+    padding-right: 3px
+.arrow-small
+    width: 12px
+    height: 6px
+    padding-top: 2px
+    padding-right: 3px
+
+.b-change-small
+    display: flex
+    position: absolute
+    bottom: 14px
+    right: 8px
+    font-size: 10px
+    color: rgba(35,40,130, 0.7)
+    @include display-flex-center-mixin
+.b-change
+    display: flex
+    position: absolute
+    bottom: 27px
+    right: 20px
+    font-size: 10px
+    color: rgba(35,40,130, 0.7)
+    @include display-flex-center-mixin
+.re-box
+    background: rgba(255,30,80,0.04)
+    border-radius: 8px
+    width: 196px
+    height: 62px
+    margin-left: 10px
+    margin-top: 10px
+.re-completion
+    font-size: 18px
+    line-height: 25px
+    color: rgba(35,40,130, 0.9)
+    font-weight: bold
+    padding: 6px 0px 0px 14px
+
+.re-name-container
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    padding: 7px 0px 0px 14px
+
+.re-name
+    font-weight: 600
+    font-size: 12px
+    line-height: 16px
+    text-transform: uppercase
+    color: rgba(35,40,130,0.8)
+    opacity: 0.8
+    padding-right: 5px
+    // padding: 7px 0px 0px 14px
+
+.border-red
+    border-bottom: 4px solid #D63228
+    box-sizing: border-box
+
+.border-green
+    border-bottom: 4px solid #36B496
+    box-sizing: border-box

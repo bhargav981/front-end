@@ -1,0 +1,71 @@
+.step-1-container {
+    padding-right: 25px;
+    min-width: 695px;
+    display: flex;
+    box-sizing: border-box;
+}
+
+.step-1-container-img-box {
+    width: 90px;
+    min-width: 90px;
+}
+
+.step-1-container-text-box {
+    margin-left:10px;
+    text-align: initial;
+    padding-bottom: 0 !important
+}
+
+.step-1-container-header {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 27px;
+    color: #031A20;
+    opacity: 0.8
+}
+
+.step-1-container-text {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 25px;
+    color: #031A20;
+    opacity: 0.8
+}
+
+.img-text {
+    padding: 0 !important;
+    font-size: 12px;
+}
+
+.step-2-container-img-box {
+    width: 90px;
+    min-width: 90px;;
+}
+
+.step-2-container-text-box{
+    padding-right: 10px;
+    margin-left: 10px;
+    text-align: initial;
+    padding-bottom: 0 !important
+}
+
+.step-2-container-text {
+    font-size: 16px;
+    line-height: 25px;
+    color: #031A20;
+    opacity: 0.8;
+}
+
+.step-3-container {
+    min-width: 695px;
+    display: flex;
+    box-sizing: border-box;
+    text-align: left;
+    padding-right: 25px;
+    font-size: 16px;
+    line-height: 25px;
+}
+
+.step-4-container {
+    max-width: 400px
+}

@@ -1,0 +1,100 @@
+@import '~styles/mixins.sass'
+
+.sim-mvp-container
+	display: flex
+	align-items: center
+	justify-content: flex-start
+	height: 100%
+	padding-left: 15px
+	box-sizing: border-box
+	cursor: pointer
+	position: relative
+
+.mvp-down-arrow
+	position: absolute
+	width: 100%
+	height: 10px
+	background: rgba(255, 255, 255, 0.5)
+	top: 100%
+	left: 0
+	box-shadow: 0 2px 4px 0px rgba(0, 0, 0, 0.5)
+	border-bottom-left-radius: 3px
+	border-bottom-right-radius: 3px
+	@include display-flex-center-mixin
+	-webkit-animation: showDownArrow 0.5s 1
+	animation: showDownArrow 0.5s 1
+
+.down-arrow
+	width: 10px
+	height: 5px
+	
+.sim-mvp-content
+	display: flex
+	align-items: center
+	justify-content: flex-start
+	padding-right: 20px
+	height: 100%
+	box-sizing: border-box
+
+.sim-mvp-details
+	width: 170px
+	height: 100%
+	@include display-flex-center-mixin
+	flex-direction: column
+	box-sizing: border-box
+
+.sim-mvp-top
+	width: 100%
+	height: 55%
+	display: flex
+	align-items: flex-end
+	justify-content: flex-start
+	// padding-bottom: 2px
+	box-sizing: border-box
+
+.sim-mvp-text
+	padding-right: 5px
+
+.sim-mvp-value
+	padding-left: 5px
+
+.sim-mvp-bottom
+	width: 100%
+	height: 45%
+	display: flex
+	align-items: flex-start
+	justify-content: center
+	padding-top: 2px
+	box-sizing: border-box
+
+.sim-mvp-arrow-container
+	padding: 0 0 0 15px
+	@include display-flex-center-mixin
+	box-sizing: border-box
+
+.sim-mvp-arrow
+	width: 5px
+	height: 5px
+
+.sim-mvp-progress-bar-container
+	width: 100%
+	height: 7px
+	border-radius: 3px
+	display: flex
+	align-items: center
+	justify-content: flex-start
+	margin-top: 2px
+	overflow: hidden
+
+.sim-mvp-progress-bar
+	height: 7px
+	border-radius: 3px
+	display: flex
+
+@keyframes showDownArrow
+	from
+		top: 80%
+		opacity: 0
+	to
+		top: 100%
+		opacity: 1

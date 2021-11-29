@@ -1,0 +1,192 @@
+@import '~styles/mixins.sass'
+
+.story-popup-container
+	width: 912px
+	// height: 548px
+
+.header-container
+	width: 100%
+	min-height: 90px
+	position: relative
+
+.content-container
+	width: 100%
+	// height: calc(100% - 81px)
+	min-height: 200px
+	// @include display-flex-center-mixin
+	display: flex
+	flex-direction: column
+	align-items: flex-start
+	justify-content: flex-start
+	position: relative
+	box-sizing: border-box
+	padding-bottom: 20px
+
+.header-background-container
+	position: absolute
+	z-index: 1
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+
+.header-content-container
+	position: absolute
+	z-index: 2
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	@include display-flex-center-mixin
+	padding-top: 5px
+
+.header-details-container
+	width: 90%
+	height: 100%
+	@include display-flex-center-mixin
+	flex-direction: column
+	padding: 0 20px
+	box-sizing: border-box
+
+.story-name
+	width: 100%
+	height: 60%
+	display: flex
+	align-items: center
+	justify-content: flex-start
+
+.story-details
+	width: 100%
+	height: 40%
+	display: flex
+	align-items: flex-start
+	justify-content: flex-start
+
+.close-container
+	width: 10%
+	height: 100%
+	@include display-flex-center-mixin
+
+.close-icon
+	width: 26px
+	height: 26px
+
+.each-detail-container
+	@include display-flex-center-mixin
+	padding-right: 30px
+
+.each-detail-name
+	padding-right: 5px
+
+.each-detail-value
+	padding-right: 10px
+
+.each-detail-info
+	width: 10px
+	height: 10px
+
+.story-description-container
+	width: 70%
+	height: 35%
+	box-sizing: border-box
+	padding: 10px 24px
+
+.story-history-container
+	width: 70%
+	height: 50%
+	box-sizing: border-box
+	padding: 24px
+
+.story-description-container-full
+	width: 100%
+	height: 35%
+	box-sizing: border-box
+	padding: 10px 24px
+
+.story-history-container-full
+	width: 100%
+	height: 50%
+	box-sizing: border-box
+	padding: 24px
+
+.story-details-container
+	width: 70%
+	height: 20%
+	box-sizing: border-box
+	padding: 10px 24px
+
+.story-actions-container
+	width: 100%
+	height: 100%
+	box-sizing: border-box
+	padding: 10px 0 10px 24px
+	display: flex
+	align-items: center
+	justify-content: flex-end
+	position: absolute
+	top: 0
+	right: 0
+	z-index: 1
+	overflow-y: auto
+
+.story-description-heading
+	width: 100%
+	text-align: left
+	padding-bottom: 10px
+
+.story-description-content
+	width: 100%
+	text-align: left
+
+.feature-description-heading
+	width: 100%
+	text-align: left
+	padding-bottom: 10px
+	padding-top: 20px
+	display: flex
+	align-items: center
+	justify-content: flex-start
+
+.feature-description-content
+	width: 100%
+	text-align: left
+	padding-bottom: 10px
+
+.story-history-heading
+	width: 100%
+	text-align: left
+	padding-bottom: 10px
+	height: 16px
+
+.story-history-content
+	width: 100%
+	// height: calc(100% - 26px)
+	height: 100%
+	overflow-y: auto
+
+.feature-image
+	width: 20px
+	height: 20px
+	margin-right: 10px
+
+.selection-container
+	box-sizing: border-box
+	display: flex
+	align-items: flex-start
+	margin-top: 10px
+
+.selection-content
+	cursor: pointer
+	height: 36px
+	box-sizing: border-box
+	padding: 10px
+	height: 100%
+	@include display-flex-center-mixin
+
+.checkbox-container
+	width: 18px
+	height: 18px
+
+.text-container
+	padding-left: 4px
+	

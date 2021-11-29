@@ -1,0 +1,46 @@
+@import '~styles/mixins.sass'
+
+.user-profile-container-with-options
+	@include display-flex-center-mixin
+	position: relative
+	outline: none
+	padding-left: 20px
+
+.user-profile-container
+	@include display-flex-center-mixin
+	// width: 40px
+	cursor: pointer
+	
+.user-profile-image-container
+	width: 24px
+	height: 24px
+
+.user-profile-arrow-container
+	margin-left: 5px
+	width: 8px
+	height: 6px
+
+.user-profile-option-container
+	position: absolute
+	width: 200px
+	// height: 110px
+	z-index: 50
+	top: 35px
+	left: -160px
+	overflow: hidden
+
+.each-option
+	width: 100%
+	padding: 5px 20px
+	box-sizing: border-box
+
+.user-name-container
+	width: 100%
+	box-sizing: border-box
+	padding: 5px 20px
+
+.user-name
+	width: 100%
+	text-align: left
+	padding: 5px 0
+	word-break: break-all

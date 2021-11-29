@@ -1,0 +1,102 @@
+include:
+    - local: 'devops/.gitlab-ci-generic-build-deploy.yml'
+
+stages:
+  - sonarqube-check
+  - dev_build_deploy
+  - stg_build_deploy
+  - preprod_build_deploy
+  - prod_build_deploy
+
+# Global Variables
+variables:
+    DOCKER_HOST: tcp://localhost:2375/
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: ""
+    ENVIRONMENT_NAME: "preprod" # Override ENVIRONMENT_NAME manually only during prod build/deploy
+    SENTRY_ORG: "knolskape"
+    SENTRY_PROJECT: "agile-fe" 
+
+# Global Image used for all the jobs
+image: registry.knolskape.com/gitlab-ci/base-image:v1.2
+
+services:
+    - name: docker:19.03.0-dind
+      entrypoint: ["env", "-u", "DOCKER_HOST"]
+      command: ["dockerd-entrypoint.sh"]
+
+# Development Block
+dev_firebase_build_deploy:
+    stage: dev_build_deploy
+    variables:
+      APP_NAME: agile-webapp-dev
+      firebaseEnvironment: agile-webapp-dev
+      REGISTRY_URL: asia.gcr.io/knol-dev-stg
+      GCP_ENV_FILE: $DEV_GCP_ENV_FILE
+      GCP_DEPLOYER_SERVICE_ACCOUNT: $DEV_GCP_DEPLOYER_SERVICE_ACCOUNT
+      FIREBASE_PROJECT_NAME: knol-dev-stg
+    tags:
+      - devgitlabrunner
+    environment:
+      name: develop
+    only:
+      variables:
+        - $CI_COMMIT_REF_NAME == "develop"
+    extends: .build_deploy_template
+
+#Staging Block
+stg_firebase_build_deploy:
+    stage: stg_build_deploy
+    variables:
+      APP_NAME: agile-webapp-stg
+      firebaseEnvironment: agile-webapp-stg
+      REGISTRY_URL: asia.gcr.io/knol-dev-stg
+      GCP_ENV_FILE: $STG_GCP_ENV_FILE
+      GCP_DEPLOYER_SERVICE_ACCOUNT: $STG_GCP_DEPLOYER_SERVICE_ACCOUNT
+      FIREBASE_PROJECT_NAME: knol-dev-stg
+    tags:
+      - stggitlabrunner
+    environment:
+      name: staging
+    only:
+      variables:
+        - $CI_COMMIT_REF_NAME == "staging"
+    extends: .build_deploy_template
+
+# PREPROD BLOCK
+preprod_firebase_build_deploy:
+    stage: preprod_build_deploy
+    variables:
+      APP_NAME: agile-webapp-preprod
+      firebaseEnvironment: agile-webapp-preprod
+      REGISTRY_URL: asia.gcr.io/knol-preprod
+      GCP_ENV_FILE: $PREPROD_GCP_ENV_FILE
+      GCP_DEPLOYER_SERVICE_ACCOUNT: $PREPROD_GCP_DEPLOYER_SERVICE_ACCOUNT
+      FIREBASE_PROJECT_NAME: knol-preprod
+    tags:
+      - preprodgitlabrunner
+    environment:
+      name: preprod
+    only:
+      variables:
+        - $CI_COMMIT_REF_NAME == 'prod' && $ENVIRONMENT_NAME == "preprod"
+    extends: .build_deploy_template
+
+# Prod Block
+prod_firebase_build_deploy:
+    stage: prod_build_deploy
+    variables:
+      APP_NAME: agile-webapp-prod
+      firebaseEnvironment: agile-webapp-prod
+      REGISTRY_URL: asia.gcr.io/knol-prod
+      GCP_ENV_FILE: $PROD_GCP_ENV_FILE
+      GCP_DEPLOYER_SERVICE_ACCOUNT: $PROD_GCP_DEPLOYER_SERVICE_ACCOUNT
+      FIREBASE_PROJECT_NAME: knol-prod
+    tags:
+      - prodgitlabrunner
+    environment:
+      name: prod
+    only:
+      variables:
+        - $CI_COMMIT_REF_NAME == 'prod' && $ENVIRONMENT_NAME == "prod"
+    extends: .build_deploy_template

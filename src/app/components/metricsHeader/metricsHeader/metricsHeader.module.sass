@@ -1,0 +1,41 @@
+@import '~styles/mixins.sass'
+
+.metrics-header-container
+	width: 100%
+	height: 100%
+	display: flex
+	@extend %row
+	position: relative
+
+.metrics-header-content
+	@include col-complete-container
+	height: 100%
+	display: flex
+	align-items: center
+	justify-content: space-between
+	padding: 0
+
+.content-left
+	display: flex
+	align-items: center
+	justify-content: flex-start
+	height: 100%
+	padding: 0
+
+.content-middle
+	display: flex
+	align-items: center
+	justify-content: center
+	height: 100%
+	padding: 0
+
+.vertical-bar
+	width: 1px
+	height: 70%
+
+.content-right
+	display: flex
+	align-items: center
+	justify-content: flex-end
+	height: 100%
+	padding: 0

@@ -1,0 +1,36 @@
+@import '~styles/mixins.sass'
+
+.metric-container
+	@include display-flex-center-mixin
+	// margin-right: 10px
+	
+.metric-content
+	display: flex
+	align-items: flex-start
+	justify-content: center
+	flex-direction: column
+	// width: 148px
+	height: 50px
+	border-radius: 10px
+	box-sizing: border-box
+	padding: 0 10px
+
+.metric-name-desc-container
+	display: flex
+	align-items: center
+	justify-content: flex-start
+
+.metric-name
+	padding-right: 5px
+
+.metric-image-value-container
+	display: flex
+	align-items: center
+	justify-content: flex-start
+
+.metric-image
+	width: 20px
+	height: 20px
+
+.metric-value
+	padding-left: 5px

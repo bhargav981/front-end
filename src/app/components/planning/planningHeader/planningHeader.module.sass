@@ -1,0 +1,53 @@
+@import '~styles/mixins.sass'
+
+.planning-header-container
+	width: 100%
+	height: 140px
+	box-sizing: border-box
+	padding-right: 30px
+
+.tabs-container
+	@include display-flex-start
+	padding-top: 23px
+
+.tab-container
+	@include display-flex-start
+
+.tab-number
+	@include display-flex-center-mixin
+	width: 24px
+	height: 24px
+	border-radius: 50%
+
+.tab-title
+	height: 25px
+	margin: 0 8px 0 5px
+	text-transform: uppercase
+
+.tab-info
+	width: 12px
+	height: 12px
+	border-radius: 50%
+	opacity: 0.2
+
+.tab-seperation-line
+	width: 38px
+	height: 1px
+	opacity: 0.2
+	margin: 0 10px
+
+.selected-tab-description
+	@include display-flex-start
+	margin: 15px 0
+	text-align: left
+
+.seperation-line
+	width: 100%
+	height: 1px
+
+
+@media only screen and (max-height: 700px)
+	.tabs-container
+		padding-top: 13px
+	.selected-tab-description
+		margin: 10px 0

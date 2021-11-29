@@ -1,0 +1,50 @@
+@import '~styles/mixins.sass'
+
+.header-container
+	width: 100%
+	min-height: 50px
+	position: relative
+	border-top-left-radius: 7px
+	border-top-right-radius: 7px
+	overflow: hidden
+
+.header-background-container
+	position: absolute
+	z-index: 1
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+
+.header-content-container
+	position: absolute
+	z-index: 2
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	@include display-flex-center-mixin
+
+.header-details-container
+	width: 90%
+	height: 100%
+	@include display-flex-center-mixin
+	flex-direction: column
+	padding: 0 20px
+	box-sizing: border-box
+
+.story-name
+	width: 100%
+	height: 60%
+	display: flex
+	align-items: center
+	justify-content: flex-start
+
+.close-container
+	width: 10%
+	height: 100%
+	@include display-flex-center-mixin
+
+.close-icon
+	width: 26px
+	height: 26px
